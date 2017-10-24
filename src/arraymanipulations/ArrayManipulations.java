@@ -15,10 +15,13 @@ public class ArrayManipulations {
         System.out.print ("Vetor Ordenado = {");
         
         // Laço para a exibição dos valores do vetor
-        for (double elemento : vetorOrdenado) {
+        //for (double elemento : vetorOrdenado) {
+        for (int i = 0; i < vetorOrdenado.length; ++ i) {
             
-            System.out.print (elemento + "\t");
+            System.out.printf ("%f%s", vetorOrdenado [i], i == (vetorOrdenado.length - 1) ? "": "; ");
         }
+            
+       
         
         // Fecha a mensagem amigável
         System.out.println ("}");
@@ -31,9 +34,10 @@ public class ArrayManipulations {
         // Exibe os elementos do vetor preenchido
         System.out.print ("Vetor Preenchido = {");
         
-        for (int elemento : vetorPreenchido) {
+        //for (int elemento : vetorPreenchido) {
+        for (int i = 0; i < vetorPreenchido.length; ++ i) {
             
-            System.out.print (elemento + "\t");
+            System.out.printf ("%d%s", vetorPreenchido [i], i == (vetorPreenchido.length - 1) ? "": ", ");
         }
         
         System.out.println ("}");
@@ -81,12 +85,14 @@ public class ArrayManipulations {
     
     private static void exibeVetor (int [] vetor, String msg) {
         
-        System.out.printf ("\n%s", msg);
+        System.out.printf ("\n%s = {", msg);
         
-        for (int valor : vetor) 
-            System.out.printf ("%d", valor);
+        for (int i = 0; i < vetor.length; ++ i) {
+            
+            System.out.printf ("%d%s", vetor [i], i == (vetor.length - 1) ? "": ", ");
+        }
         
-        System.out.println ();
+        System.out.println ("}");
     }
     
 }
